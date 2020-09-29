@@ -1,0 +1,17 @@
+[nz-carousel-content] {
+
+  background-image: url('src/assets/banner.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  overflow: hidden;
+}
+.ant-carousel {
+  height: 300px !important;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
+}
+

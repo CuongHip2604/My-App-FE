@@ -1,0 +1,29 @@
+<form nz-form class="form-add" [formGroup]="formEdit">
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please input your photo title!">
+      <nz-input-group>
+        <label for="title">Title:</label>
+        <input type="text" #title nz-input formControlName="title" required placeholder="Eg: Wow nature..." />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please input your Password!">
+      <label for="Category">Category:</label>
+      <nz-select nzShowSearch nzAllowClear nzPlaceHolder="What's your photo category?">
+        <nz-option *ngFor="let option of categories" [nzValue]="option" [nzLabel]="option.label"  ></nz-option>
+      </nz-select>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please input your Password!">
+      <label for="photo">Photo:</label>
+      <div class="image"></div>
+      <button nz-button nzType="primary" >Random Photo</button>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-button-group>
+    <button nz-button [routerLink]="['/photo-app']" >Cancel</button>
+    <button nz-button nzType="primary">OK</button>
+  </nz-button-group>
+</form>
