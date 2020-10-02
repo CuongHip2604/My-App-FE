@@ -1,0 +1,37 @@
+
+<div class="wrap_login">
+  <div class="login">
+    <nz-card style="width:400px">
+      <h2>SIGN IN</h2>
+      <nz-divider></nz-divider>
+      <form nz-form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input your username!">
+            <nz-form-label nzRequired nzFor="username">Username</nz-form-label>
+            <nz-input-group nzPrefixIcon="user">
+              <input type="text" formControlName="username" nz-input placeholder="Username" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input your Password!">
+            <nz-form-label nzRequired nzFor="password">Password</nz-form-label>
+            <nz-input-group nzPrefixIcon="lock">
+              <input type="password" formControlName="password" nz-input placeholder="Password" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <div nz-row class="login-form-margin">
+          <div nz-col [nzSpan]="12">
+            <a class="login-form-forgot">Forgot password</a>
+          </div>
+        </div>
+        <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Login</button>
+        <nz-divider nzPlain nzText="Or"></nz-divider>
+        <div style="text-align: center;">
+          <a routerLink="/register"> register now! </a>
+        </div>
+      </form>
+    </nz-card>
+  </div>
+</div>

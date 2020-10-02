@@ -1,5 +1,4 @@
 [nz-carousel-content] {
-
   background-image: url('src/assets/banner.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -8,7 +7,7 @@
   overflow: hidden;
 }
 .ant-carousel {
-  height: 300px !important;
+  height: 250px !important;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;

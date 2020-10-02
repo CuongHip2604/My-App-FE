@@ -1,0 +1,27 @@
+.todo-list {
+  transform: translate(50%, 50%);
+  width: 50%;
+  box-shadow: 0 1px 4px rgba(0,21,41,.08);
+}
+.todo-list h1{
+  text-align: center;
+  color: #1890ff;
+}
+.todo-list .task {
+  margin: 12px 0;
+  border: 1px solid #e2e2e2;
+}
+.todo-list .task .task-item{
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.todo-list .task .task-item .disabled{
+  text-decoration: line-through;
+  color: #bfbfbf;
+}
+.todo-list .task .task-item .actions i{
+  margin: 8px;
+  cursor: pointer;
+
+}

@@ -1,4 +1,4 @@
-<form nz-form class="form-add" [formGroup]="formAdd">
+<form nz-form class="form-add" [formGroup]="formAdd" (ngSubmit)="submitForm()" >
   <nz-form-item>
     <nz-form-control nzErrorTip="Please input your photo title!">
       <nz-input-group>
@@ -10,20 +10,22 @@
   <nz-form-item>
     <nz-form-control nzErrorTip="Please input your Password!">
       <label for="Category">Category:</label>
-      <nz-select nzShowSearch nzAllowClear nzPlaceHolder="What's your photo category?">
-        <nz-option *ngFor="let option of categories" [nzValue]="option" [nzLabel]="option.label"  ></nz-option>
+      <nz-select nzShowSearch nzAllowClear nzPlaceHolder="What's your photo category?" formControlName="category">
+        <nz-option *ngFor="let option of categories" [nzValue]="option.label" [nzLabel]="option.label"  ></nz-option>
       </nz-select>
     </nz-form-control>
   </nz-form-item>
   <nz-form-item>
-    <nz-form-control nzErrorTip="Please input your Password!">
+    <nz-form-control nzErrorTip="Please input your photo!">
       <label for="photo">Photo:</label>
-      <div class="image"></div>
-      <button nz-button nzType="primary" >Random Photo</button>
+      <input type="text" #title nz-input formControlName="url_image" required placeholder="https://..."/>
+      <div class="image">
+        <img [src]="getUrlImage" alt="">
+      </div>
     </nz-form-control>
   </nz-form-item>
   <nz-button-group>
-    <button nz-button [routerLink]="['/photo-app']" >Cancel</button>
-    <button nz-button nzType="primary">OK</button>
+    <button nz-button routerLink="/photo-app" >Cancel</button>
+    <button nz-button nzType="primary" (click)="submitForm()">OK</button>
   </nz-button-group>
 </form>

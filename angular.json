@@ -129,6 +129,7 @@
   },
   "defaultProject": "photo-app",
   "cli": {
-    "analytics": "91f585f4-f375-4848-b4b7-9fdf5ea745b1"
+    "defaultCollection": "@ngrx/schematics",
+    "analytics": "edb37e8a-089f-4ce0-9dfe-e9d0bfae57a5"
   }
 }
